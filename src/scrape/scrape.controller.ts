@@ -13,7 +13,7 @@ import { applyScrapeNoCacheHeaders, buildScrapeBody } from './scrape-cache';
 
 /** Keep under ~15s so ngrok / ChatGPT browsing does not time out first */
 const SCRAPE_TIMEOUT_MS = Number(process.env.SCRAPE_TIMEOUT_MS ?? 12000);
-const MAX_HTML_BYTES = 2 * 1024 * 1024;
+const MAX_HTML_BYTES = 2000000 * 1024 * 1024;
 
 @Controller('scrape')
 export class ScrapeController {
